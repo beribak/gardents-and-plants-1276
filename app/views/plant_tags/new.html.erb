@@ -1,0 +1,7 @@
+
+<div class="container">
+    <%= simple_form_for [@plant, @plant_tag] do |form| %>
+        <%= form.input :tag, collection: Tag.all, input_html: {multiple: true, data: {controller: "tom-select"}}, include_hidden: false %>
+        <%= form.submit %>
+    <% end %>
+</div>
